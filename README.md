@@ -1,2 +1,1 @@
-# research
-Research papers
+# Presentations and papers from various Mysten Labs teams
