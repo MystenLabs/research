@@ -1,4 +1,4 @@
-# Presentations and papers from various Mysten Labs teams
+# Research publications from various Mysten Labs teams
 
 | Area          | Title                                               | Link          |
 | ------------- | --------------------------------------------------- | ------------- |
