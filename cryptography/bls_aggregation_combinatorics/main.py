@@ -1,5 +1,6 @@
 import csv
 import math
+import matplotlib.pyplot as plt
 
 # Initialize the cache with factorials for n = 0 and n = 1
 factorials = [1, 1]
@@ -168,5 +169,39 @@ def main_print_only():
               f"{combinations_max_k}")
 
 
+def plot_csv():
+    # Extract the data from the CSV file
+    with open('combinations.csv', mode='r') as csv_file:
+        reader = csv.reader(csv_file)
+        # Skip the header row
+        next(reader)
+        data = [(int(row[0]), int(row[1])) for row in reader]
+
+    # create a plot for the n <= 300
+    # Filter data for n <= 300
+    data = [(n, min_k) for n, min_k in data if n <= 300]
+
+    x = [row[0] for row in data]
+    y = [row[1] for row in data]
+    plt.plot(x, y, linewidth=1.5)
+
+    # Set x-axis ticks and tick labels
+    x_tick_labels = ['{:,}'.format(i) for i in range(0, max(x) + 1, 10)]
+    plt.xticks(range(0, max(x) + 1, 10), x_tick_labels)
+
+    # Set y-axis ticks and tick labels
+    plt.yticks(range(0, max(y) + 1, 5))
+
+    # Display the values of min_k_for_aggregated_combinations for every 10
+    for i in range(1, max(x) + 1, 10):
+        index = x.index(i)
+        plt.annotate(y[index], (x[index], y[index]), textcoords="offset points", xytext=(0, 10), ha='center')
+
+    plt.xlabel('n')
+    plt.ylabel('max_k_aggregated_sum')
+    plt.show()
+
+
 if __name__ == '__main__':
     main_write_to_scv()
+    plot_csv()
