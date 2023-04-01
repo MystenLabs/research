@@ -57,6 +57,7 @@ Computes the factorial of a non-negative integer n.
 `n`: The non-negative integer to compute the factorial of.
 
 **Returns**
+
 The factorial of `n`.
 
 ---
