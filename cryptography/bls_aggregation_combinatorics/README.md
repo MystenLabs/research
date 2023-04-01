@@ -37,11 +37,11 @@ The program uses the csv module to write the computed properties to a CSV file n
 #### Example output for up to `n = 300` and `n = 10000`, respectively.
 
 <p align="center">
-  <img width="500" src="plot_combinatorics_n_up_to_300.png">
+  <img width="800" src="plot_combinatorics_n_up_to_300.png">
 </p>
 
 <p align="center">
-  <img width="500" src="plot_combinatorics_n_up_to_10000.png">
+  <img width="800" src="plot_combinatorics_n_up_to_10000.png">
 </p>
 
 ## Functions
